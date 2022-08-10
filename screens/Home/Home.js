@@ -1,17 +1,35 @@
-import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
+import { 
+    View, 
+    Text, 
+    TouchableOpacity, 
+    TouchableWithoutFeedback, 
+    Image, 
+    FlatList 
+  } from "react-native";
+import Animated from "react-native-reanimated"
+import { 
+  useSharedValue, 
+  useAnimatedStyle, 
+  withTiming, 
+} from 'react-native-reanimated'
+
+import { connect } from 'react-redux'
+import { setSelectedTab } from '../../stores/tab/tabActions';
+
+import { OnBoarding } from '../../screens'
+
 
 const Home = ({ navigation }) => {
   return (
-    <View>
-      <Text>Home</Text>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("OnBoarding")}
-        style={{ backgroundColor: "#000", padding: 20 }}
-      >
-        <Text>Back</Text>
-      </TouchableOpacity>
-    </View>
+    <Animated.View>
+      {/* Header */}
+
+      {/* Content */}
+      <Text>Main Layout</Text>
+
+      {/* Bottom Tabs */}
+    </Animated.View>
   );
 };
 

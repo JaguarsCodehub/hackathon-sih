@@ -107,7 +107,8 @@ const OnBoarding = () => {
         </View>
 
         {/* Buttons */}
-        {currentIndex < constants.onboarding_screens.length - 1 && (
+        {
+          currentIndex < constants.onboarding_screens.length - 1 && 
           <View
             style={{
               flexDirection: "row",
@@ -134,40 +135,40 @@ const OnBoarding = () => {
                 width: 100,
                 borderRadius: SIZES.radius,
               }}
-              // labelStyle={{
-              //   color: COLORS.primary,
-              // }}
               onPress={() => {
-                flatListRef?.current?.scrollToIndex({
-                  index: currentIndex + 1,
-                  animated: true,
-                });
+                let index = Math.ceil(Number(scrollX.value / SIZES.width))
+
+                if (index < constants.onboarding_screens.length - 1) {
+                  flatListRef?.current?.scrollToIndex({
+                    index: currentIndex + 1,
+                    animated: true
+                  })
+                }
               }}
             />
           </View>
-        )}
+        }
+
+        {
+          currentIndex == constants.onboarding_screens.length - 1 &&
+
+          <View style={{
+            paddingHorizontal: SIZES.padding,
+            marginVertical: SIZES.padding
+          }}>
+            <TextButton 
+              label="Let's Get Started"
+              buttonContainerStyle={{
+                height: 60,
+                borderRadius: SIZES.radius
+              }}
+              onPress={() => navigation.navigate('Home')}
+            />
+
+          </View>
+        }
       </View>
     );
-
-    {
-      currentIndex == constants.onboarding_screens.length - 1 && (
-        <View
-          style={{
-            paddingHorizontal: SIZES.padding,
-            marginVertical: SIZES.padding,
-          }}
-        >
-          <TextButton
-            label="Let's Get Started"
-            buttonContainerStyle={{
-              height: 60,
-              borderRadius: SIZES.radius,
-            }}
-            onPress={() => navigation.navigate("Home")}
-          />
-        </View>
-      );
-    }
   }
 
   return (

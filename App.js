@@ -5,10 +5,24 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import { OnBoarding, Home } from "./screens";
 
+import { legacy_createStore as createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+
+import thunk from 'redux-thunk'
+import rootReducer from "./stores/rootReducer";
+
+
+
 const Stack = createStackNavigator();
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+)
 
 export default function App() {
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
@@ -24,6 +38,7 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} key={Home} />
       </Stack.Navigator>
     </NavigationContainer>
+    </Provider>
   );
 }
 

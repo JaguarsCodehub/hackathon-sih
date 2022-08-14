@@ -1,6 +1,6 @@
 const myProfile = {
   name: "ByProgrammers",
-  profile_image: require("../assets/images/profile.png"),
+  profile_image: require("../assets/images/profile.jpg"),
   address: "No. 88, Jln Padungan, Kuching",
 };
 

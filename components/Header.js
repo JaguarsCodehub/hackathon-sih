@@ -1,26 +1,75 @@
-import { View, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
-import {FONTS,COLORS} from '../constants/theme'
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import React from "react";
+import { FONTS, COLORS, SIZES } from "../constants/theme";
+import { dummyData } from "../constants";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import Entypo from "react-native-vector-icons/Entypo";
 
-const Header = ({ containerStyle, title }) => {
+const Header = ({ containerStyle, title, leftComponent, rightComponent }) => {
   return (
-    <View>
-        {/* Left */}
+    <View
+      style={{
+        marginTop: 40,
+        flexDirection: "row",
+        marginHorizontal: SIZES.padding,
+        alignItems: "center",
+        height: 80,
+      }}
+    >
+      {/* Text */}
+      <View
+        style={{
+          flex: 1,
+        }}
+      >
         <View
-            style={{
-                ...containerStyle,
-                flexDirection: 'row',
-                justifyContent: 'center'
-            }}
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+          }}
         >
-        <Text style={{
-            ...FONTS.h3
-        }}>
-                {title}
-        </Text>
+          <FontAwesome5 name="location-arrow" size={18} color="#FF6D6D" />
+          <Text
+            style={{
+              color: "#262626",
+              fontSize: 22,
+              fontWeight: "bold",
+              paddingLeft: 10,
+            }}
+          >
+            Mumbai, Maharashtra
+          </Text>
+          <Entypo
+            name="chevron-down"
+            size={20}
+            color="#8B8B8B"
+            style={{ paddingLeft: 10 }}
+          />
         </View>
-    </View>
-  )
-}
+        <Text
+          style={{
+            marginTop: 3,
+            color: COLORS.gray2,
+            ...FONTS.body3,
+          }}
+        >
+          Tolani College of Commerce, Sher E ...
+        </Text>
+      </View>
 
-export default Header
+      {/* Image */}
+      <TouchableOpacity>
+        <Image
+          source={dummyData?.myProfile?.profile_image}
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: 20,
+          }}
+        />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export default Header;

@@ -105,6 +105,7 @@ const Home = () => {
             <HorizontalFoodCard
               containerStyle={{
                 height: 180,
+
                 width: SIZES.width * 0.85,
                 marginLeft: index == 0 ? SIZES.padding : 18,
                 marginRight: index == recommends.length - 1 ? SIZES.padding : 0,
@@ -112,9 +113,9 @@ const Home = () => {
                 alignItems: "center",
               }}
               imageStyle={{
-                marginTop: 35,
-                height: 150,
-                width: 150,
+                // marginTop: 35,
+                height: 120,
+                width: 120,
               }}
               item={item}
               onPress={() => console.log("HORIZONTAL")}
@@ -203,6 +204,8 @@ const Home = () => {
             style={{
               flexDirection: "row",
               height: 55,
+              alignItems: "center",
+              justifyContent: "center",
               marginTop: SIZES.padding,
               marginLeft: index == 0 ? SIZES.padding : SIZES.radius,
               marginRight:
@@ -211,7 +214,7 @@ const Home = () => {
               borderRadius: SIZES.radius,
               backgroundColor:
                 selectedCategoryId == item.id
-                  ? COLORS.lightOrange
+                  ? COLORS.lightGreen1
                   : COLORS.lightGray1,
             }}
             onPress={() => {
@@ -222,9 +225,11 @@ const Home = () => {
             <Image
               source={item.icon}
               style={{
-                marginTop: 5,
-                height: 50,
-                width: 50,
+                // marginTop: 5,
+                height: 40,
+                width: 40,
+                marginRight: 10,
+                marginLeft: 5,
               }}
             />
 
@@ -232,6 +237,7 @@ const Home = () => {
               style={{
                 alignSelf: "center",
                 marginRight: SIZES.base,
+                fontWeight: "bold",
                 color:
                   selectedCategoryId == item.id
                     ? COLORS.white

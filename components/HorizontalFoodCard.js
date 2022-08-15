@@ -7,9 +7,10 @@ const HorizontalFoodCard = ({ containerStyle, item, imageStyle, onPress }) => {
     <TouchableOpacity
       style={{
         flexDirection: "row",
-        marginTop: 10,
+        // marginTop: 40,
         borderRadius: 20,
         backgroundColor: COLORS.lightGray1,
+        padding: 20,
         ...containerStyle,
       }}
     >
@@ -20,6 +21,7 @@ const HorizontalFoodCard = ({ containerStyle, item, imageStyle, onPress }) => {
       <View
         style={{
           flex: 1,
+          marginLeft: 20,
         }}
       >
         {/* Name */}
@@ -49,7 +51,7 @@ const HorizontalFoodCard = ({ containerStyle, item, imageStyle, onPress }) => {
             ...FONTS.h2,
           }}
         >
-          ${item.price}
+          {item.price} steps ahead
         </Text>
       </View>
     </TouchableOpacity>

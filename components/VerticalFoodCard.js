@@ -8,9 +8,19 @@ const VerticalFoodCard = ({ containerStyle, item, onPress }) => {
       style={{
         width: 200,
         padding: SIZES.radius,
+        marginBottom: 40,
         alignItems: "center",
         borderRadius: SIZES.radius,
         backgroundColor: COLORS.red,
+        shadowColor: COLORS.black,
+        shadowOffset: {
+          width: 0,
+          height: 4,
+        },
+        shadowOpacity: 0.32,
+        shadowRadius: 5.46,
+
+        elevation: 12,
         ...containerStyle,
       }}
     >
@@ -38,23 +48,25 @@ const VerticalFoodCard = ({ containerStyle, item, onPress }) => {
       {/* Info */}
       <View
         style={{
-          alignItems: "center",
-          marginTop: -20,
+          // alignItems: "center",
+          marginTop: 20,
         }}
       >
         <Text
           style={{
-            ...FONTS.h3,
+            fontSize: 18,
             fontWeight: "bold",
-            color: COLORS.white,
+            color: COLORS.black,
+            marginTop: 10,
+            textAlign: "left",
           }}
         >
           {item.name}
         </Text>
         <Text
           style={{
-            color: COLORS.white,
-            textAlign: "center",
+            color: COLORS.black,
+            textAlign: "left",
             ...FONTS.body5,
           }}
         >
@@ -66,9 +78,10 @@ const VerticalFoodCard = ({ containerStyle, item, onPress }) => {
             ...FONTS.h2,
             fontWeight: "bold",
             color: COLORS.white,
+            textAlign: "left",
           }}
         >
-          ${item.price}
+          {item.price} steps ahead
         </Text>
       </View>
     </TouchableOpacity>

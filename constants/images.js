@@ -8,6 +8,7 @@ const logo_02 = require("../assets/images/logo_02.png");
 const profile = require("../assets/images/profile.jpg");
 const map1 = require("../assets/images/map1.jpg");
 const map2 = require("../assets/images/map2.jpg");
+const map = require("../assets/images/map.png");
 
 export default {
   background_01,
@@ -18,6 +19,7 @@ export default {
   logo_01,
   logo_02,
   profile,
+  map,
   map1,
   map2,
 };

@@ -319,6 +319,8 @@ const Home = () => {
             );
           }}
         />
+
+        {/* Explore Maps */}
         <View
           style={{
             flex: 1,

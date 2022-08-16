@@ -9,6 +9,10 @@ const profile = require("../assets/images/profile.jpg");
 const map1 = require("../assets/images/map1.jpg");
 const map2 = require("../assets/images/map2.jpg");
 const map = require("../assets/images/map.png");
+const firstmap = require("../assets/images/firstmap.jpeg");
+const secondmap = require("../assets/images/secondmap.jpeg");
+const thirdmap = require("../assets/images/thirdmap.jpeg");
+const fourthmap = require("../assets/images/fourthmap.jpeg");
 
 export default {
   background_01,
@@ -22,4 +26,8 @@ export default {
   map,
   map1,
   map2,
+  firstmap,
+  secondmap,
+  thirdmap,
+  fourthmap,
 };

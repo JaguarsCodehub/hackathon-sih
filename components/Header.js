@@ -5,7 +5,16 @@ import { dummyData } from "../constants";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Entypo from "react-native-vector-icons/Entypo";
 
-const Header = ({ containerStyle, title, leftComponent, rightComponent }) => {
+const Header = ({
+  containerStyle,
+  title,
+  leftComponent,
+  rightComponent,
+  descriptionStyle,
+  nameStyle,
+  iconStyle,
+  arrowStyle,
+}) => {
   return (
     <View
       style={{
@@ -28,13 +37,19 @@ const Header = ({ containerStyle, title, leftComponent, rightComponent }) => {
             alignItems: "center",
           }}
         >
-          <FontAwesome5 name="location-arrow" size={18} color="#FF6D6D" />
+          <FontAwesome5
+            name="location-arrow"
+            size={18}
+            color="#FF6D6D"
+            style={{ ...iconStyle }}
+          />
           <Text
             style={{
               color: "#262626",
               fontSize: 22,
               fontWeight: "bold",
               paddingLeft: 10,
+              ...nameStyle,
             }}
           >
             Mumbai, Maharashtra
@@ -43,14 +58,14 @@ const Header = ({ containerStyle, title, leftComponent, rightComponent }) => {
             name="chevron-down"
             size={20}
             color="#8B8B8B"
-            style={{ paddingLeft: 10 }}
+            style={{ paddingLeft: 10, ...arrowStyle }}
           />
         </View>
         <Text
           style={{
             marginTop: 3,
-            color: COLORS.gray2,
             ...FONTS.body3,
+            ...descriptionStyle,
           }}
         >
           Tolani College of Commerce, Sher E ...

@@ -239,16 +239,11 @@ const library = {
 const menu = [
   {
     id: 1,
-    name: "Featured",
+    name: "Entry Gate",
     list: [gymnasium, auditorium, canteen],
   },
   {
     id: 2,
-    name: "Nearby you",
-    list: [hamburger, vegBiryani, wrapSandwich],
-  },
-  {
-    id: 3,
     name: "Popular",
     list: [
       hamburger,
@@ -271,17 +266,17 @@ const menu = [
     ],
   },
   {
+    id: 3,
+    name: "Workout",
+    list: [gymnasium],
+  },
+  {
     id: 4,
-    name: "Newest",
-    list: [girlsCommonRoom],
+    name: "Events",
+    list: [auditorium],
   },
   {
     id: 5,
-    name: "Trending",
-    list: [hamburger, vegBiryani, wrapSandwich],
-  },
-  {
-    id: 6,
     name: "Recommended",
     list: [canteen, library, itLab, principalRoom, boysCommonRoom],
   },

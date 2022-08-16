@@ -107,8 +107,7 @@ const OnBoarding = () => {
         </View>
 
         {/* Buttons */}
-        {
-          currentIndex < constants.onboarding_screens.length - 1 && 
+        {currentIndex < constants.onboarding_screens.length - 1 && (
           <View
             style={{
               flexDirection: "row",
@@ -125,7 +124,7 @@ const OnBoarding = () => {
               labelStyle={{
                 color: COLORS.primary,
               }}
-              onPress={() => navigation.replace("Home")}
+              onPress={() => navigation.replace("Tabs")}
             />
 
             <TextButton
@@ -136,37 +135,36 @@ const OnBoarding = () => {
                 borderRadius: SIZES.radius,
               }}
               onPress={() => {
-                let index = Math.ceil(Number(scrollX.value / SIZES.width))
+                let index = Math.ceil(Number(scrollX.value / SIZES.width));
 
                 if (index < constants.onboarding_screens.length - 1) {
                   flatListRef?.current?.scrollToIndex({
                     index: currentIndex + 1,
-                    animated: true
-                  })
+                    animated: true,
+                  });
                 }
               }}
             />
           </View>
-        }
+        )}
 
-        {
-          currentIndex == constants.onboarding_screens.length - 1 &&
-
-          <View style={{
-            paddingHorizontal: SIZES.padding,
-            marginVertical: SIZES.padding
-          }}>
-            <TextButton 
+        {currentIndex == constants.onboarding_screens.length - 1 && (
+          <View
+            style={{
+              paddingHorizontal: SIZES.padding,
+              marginVertical: SIZES.padding,
+            }}
+          >
+            <TextButton
               label="Let's Get Started"
               buttonContainerStyle={{
                 height: 60,
-                borderRadius: SIZES.radius
+                borderRadius: SIZES.radius,
               }}
-              onPress={() => navigation.navigate('Home')}
+              onPress={() => navigation.navigate("Home")}
             />
-
           </View>
-        }
+        )}
       </View>
     );
   }

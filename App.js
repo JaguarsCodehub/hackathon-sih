@@ -32,7 +32,7 @@ export default function App() {
             component={OnBoarding}
             key={OnBoarding}
           />
-          <Stack.Screen name="Home" component={TabNavigator} />
+          <Stack.Screen name="Tabs" component={TabNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

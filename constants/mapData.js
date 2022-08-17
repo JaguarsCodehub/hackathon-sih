@@ -32,3 +32,16 @@ const mapData = [
 ];
 
 export default { mapData };
+
+// {
+//   id: 1,
+//   nameF: "Dilkkush",
+//   addres: "Juhu Tara Road",
+//   categories: ["physically", "Learning"]
+// },
+// {
+//   id: 2,
+//   nameF: "Dilkkush",
+//   addres: "Juhu Tara Road",
+//   categories: ["physically", "Learning"]
+// }

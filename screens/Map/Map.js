@@ -31,6 +31,9 @@ const Map = () => {
         style={{
           backgroundColor: COLORS.lightOrange3,
         }}
+        accessible={true}
+        accessibilityLabel="This is the Maps Screen where all the Maps of College are situated"
+        accessibilityHint="You can refer this to someone who can guide you if you get Lost somewhere in College"
       >
         {/* Ground Floor */}
         <View
@@ -52,6 +55,9 @@ const Map = () => {
 
             elevation: 30,
           }}
+          accessible={true}
+          accessibilityLabel="Ground Floor Map"
+          accessibilityHint="28 steps ahead from Entry Gate"
         >
           <View style={{ borderRadius: 20 }}>
             <Image
@@ -129,6 +135,9 @@ const Map = () => {
 
             elevation: 30,
           }}
+          accessible={true}
+          accessibilityLabel="First Floor Map"
+          accessibilityHint="60 steps + stairs ahead from Entry Gate"
         >
           <View style={{ borderRadius: 20 }}>
             <Image
@@ -206,6 +215,9 @@ const Map = () => {
 
             elevation: 30,
           }}
+          accessible={true}
+          accessibilityLabel="Second Floor Map"
+          accessibilityHint="86 steps + stairs ahead from Entry Gate"
         >
           <View style={{ borderRadius: 20 }}>
             <Image
@@ -283,6 +295,9 @@ const Map = () => {
 
             elevation: 30,
           }}
+          accessible={true}
+          accessibilityLabel="Third Floor Map"
+          accessibilityHint="110 steps + stairs ahead from Entry Gate"
         >
           <View style={{ borderRadius: 20 }}>
             <Image
@@ -361,6 +376,9 @@ const Map = () => {
 
             elevation: 30,
           }}
+          accessible={true}
+          accessibilityLabel="Fourth Floor Map"
+          accessibilityHint="180 steps + stairs ahead from Entry Gate"
         >
           <View style={{ borderRadius: 20 }}>
             <Image

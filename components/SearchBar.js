@@ -28,6 +28,9 @@ const SearchBar = () => {
         elevation: 12,
       }}
       onPress={() => navigation.navigate("Search")}
+      accessible={true}
+      accessibilityLabel="This is Search bar component, You can filter rooms based upon the Floor Cards given below"
+      accessibilityHint="Double Tap on any Floor Card below and you will get the Rooms Card just below it"
     >
       <Image
         source={icons.search}

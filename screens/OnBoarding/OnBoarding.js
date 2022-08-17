@@ -135,14 +135,10 @@ const OnBoarding = () => {
                 borderRadius: SIZES.radius,
               }}
               onPress={() => {
-                let index = Math.ceil(Number(scrollX.value / SIZES.width));
-
-                if (index < constants.onboarding_screens.length - 1) {
-                  flatListRef?.current?.scrollToIndex({
-                    index: currentIndex + 1,
-                    animated: true,
-                  });
-                }
+                flatListRef?.current?.scrollToIndex({
+                  index: currentIndex + 1,
+                  animated: true,
+                });
               }}
             />
           </View>
@@ -161,7 +157,7 @@ const OnBoarding = () => {
                 height: 60,
                 borderRadius: SIZES.radius,
               }}
-              onPress={() => navigation.navigate("Home")}
+              onPress={() => navigation.navigate("Tabs")}
             />
           </View>
         )}
@@ -242,6 +238,9 @@ const OnBoarding = () => {
                   justifyContent: "center",
                   paddingHorizontal: SIZES.radius,
                 }}
+                accessible={true}
+                accessibilityHint={item.title + item.description}
+                accessibilityLabel="This is text element with a heading and description"
               >
                 <Text style={{ ...FONTS.h1, fontSize: 25 }}>{item.title}</Text>
                 <Text

@@ -59,7 +59,7 @@ const TabNavigator = () => {
             <MaterialCommunityIcons
               name="account-group"
               color={color}
-              size={25}
+              size={30}
             />
           ),
         }}
@@ -69,11 +69,7 @@ const TabNavigator = () => {
         component={Notification}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="account-group"
-              color={color}
-              size={25}
-            />
+            <MaterialCommunityIcons name="bus-side" color={color} size={30} />
           ),
         }}
       />

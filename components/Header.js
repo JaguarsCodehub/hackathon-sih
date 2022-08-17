@@ -24,6 +24,8 @@ const Header = ({
         alignItems: "center",
         height: 80,
       }}
+      accessible={true}
+      accessibilityLabel="This is the Header Component"
     >
       {/* Text */}
       <View
@@ -51,8 +53,10 @@ const Header = ({
               paddingLeft: 10,
               ...nameStyle,
             }}
+            accessible={true}
+            accessibilityLabel="Tolani College of Commerce, Andheri"
           >
-            Mumbai, Maharashtra
+            HomePage
           </Text>
           <Entypo
             name="chevron-down"

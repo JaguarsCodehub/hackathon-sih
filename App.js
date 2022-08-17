@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-import { OnBoarding, Home } from "./screens";
+import { OnBoarding, Home, Directions, Map } from "./screens";
 
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
@@ -23,7 +23,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
-            headerShown: false,
+            headerShown: true,
           }}
           initialRouteName={"OnBoarding"}
         >
@@ -31,8 +31,27 @@ export default function App() {
             name="OnBoarding"
             component={OnBoarding}
             key={OnBoarding}
+            options={{ headerShown: false }}
           />
-          <Stack.Screen name="Tabs" component={TabNavigator} />
+          <Stack.Screen
+            name="Tabs"
+            component={TabNavigator}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Map"
+            component={Map}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Directions"
+            component={Directions}
+            options={{
+              headerTitle: "Direction Matrix Route ",
+              headerTitleStyle: { letterSpacing: -0.5 },
+              headerBackAccessibilityLabel: "",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

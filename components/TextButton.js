@@ -12,6 +12,8 @@ const TextButton = ({ buttonContainerStyle, label, labelStyle, onPress }) => {
         ...buttonContainerStyle,
       }}
       onPress={onPress}
+      accessible={true}
+      accessibilityLabel="Double Tap to go to the next screen"
     >
       <Text style={{ color: COLORS.white, ...FONTS.h3, ...labelStyle }}>
         {label}

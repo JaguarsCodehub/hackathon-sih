@@ -23,6 +23,7 @@ const VerticalFoodCard = ({ containerStyle, item, onPress }) => {
         elevation: 12,
         ...containerStyle,
       }}
+      onPress={onPress}
     >
       {/* Calories and favourite */}
       {/*  */}

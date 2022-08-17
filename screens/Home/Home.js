@@ -21,6 +21,7 @@ import {
   images,
   SIZES,
 } from "../../constants";
+import { useNavigation } from "@react-navigation/native";
 
 const Section = ({ title, onPress, children }) => {
   return (
@@ -56,6 +57,8 @@ const Section = ({ title, onPress, children }) => {
 };
 
 const Home = () => {
+  const navigation = useNavigation();
+
   const [selectedCategoryId, setSelectedCategoryId] = React.useState(1);
   const [selectedMenuType, setSelectedMenuType] = React.useState(1);
   const [popular, setPopluar] = React.useState([]);
@@ -118,7 +121,7 @@ const Home = () => {
                 width: 120,
               }}
               item={item}
-              onPress={() => console.log("HORIZONTAL")}
+              onPress={() => navigation.navigate("Map")}
             />
           )}
         />
@@ -184,7 +187,7 @@ const Home = () => {
                 marginRight: index == popular.length - 1 ? SIZES.padding : 0,
               }}
               item={item}
-              onPress={() => console.log("POPULAR")}
+              onPress={() => navigation.navigate("Directions", item)}
             />
           )}
         />
@@ -221,6 +224,8 @@ const Home = () => {
               setSelectedCategoryId(item.id);
               handleChangeCategory(item.id, selectedMenuType);
             }}
+            accessible={true}
+            accessibilityRole={"none"}
           >
             <Image
               source={item.icon}
@@ -254,7 +259,11 @@ const Home = () => {
   }
 
   return (
-    <>
+    <View
+      accessible={true}
+      accessibilityLabel="This is the HomeScreen Page, you will first get the header component and search Bar below it"
+      // accessibilityHint="Double Tap on any Floor Card below and you will get the Rooms Card just below it"
+    >
       <Header />
       {/* Search */}
       <View
@@ -325,7 +334,7 @@ const Home = () => {
           style={{
             flex: 1,
             marginTop: 60,
-            backgroundColor: COLORS.white,
+            backgroundColor: COLORS.lightGreen1,
             width: 340,
             height: 480,
             alignSelf: "center",
@@ -361,10 +370,10 @@ const Home = () => {
               style={{
                 fontSize: 30,
                 fontWeight: "bold",
-                color: COLORS.orange,
+                color: "black",
               }}
             >
-              Fantastic eats and where to find them!
+              Travel easily with bus details end to end.
             </Text>
             <Text
               style={{
@@ -374,12 +383,12 @@ const Home = () => {
                 color: COLORS.black,
               }}
             >
-              Cusines from around the world
+              Bus timings at your fingertips
             </Text>
           </View>
           <TouchableOpacity
             style={{
-              borderColor: COLORS.lightOrange2,
+              borderColor: COLORS.black,
               borderWidth: 2,
               borderRadius: 18,
               flexDirection: "row",
@@ -394,7 +403,7 @@ const Home = () => {
               style={{
                 fontSize: 20,
                 fontWeight: "bold",
-                color: COLORS.gray,
+                color: COLORS.black,
                 marginLeft: 5,
               }}
             >
@@ -416,12 +425,13 @@ const Home = () => {
         <View
           style={{
             flex: 1,
-            backgroundColor: COLORS.white,
+            backgroundColor: COLORS.red,
             width: 340,
             height: 480,
             alignSelf: "center",
             borderRadius: 20,
             marginTop: 30,
+            marginBottom: 480,
             shadowColor: COLORS.gray,
             shadowOffset: {
               width: 0,
@@ -435,12 +445,14 @@ const Home = () => {
         >
           <View style={{ backgroundColor: COLORS.primary, borderRadius: 20 }}>
             <Image
-              source={images.map2}
+              source={images.map1}
               style={{
                 width: 340,
                 height: 240,
                 borderRadius: 20,
+                opacity: 0.8,
               }}
+              resizeMode="cover"
             />
           </View>
           <View
@@ -452,10 +464,10 @@ const Home = () => {
               style={{
                 fontSize: 30,
                 fontWeight: "bold",
-                color: COLORS.orange,
+                color: COLORS.white,
               }}
             >
-              Fantastic eats and where to find them!
+              Special schools for disabled people.
             </Text>
             <Text
               style={{
@@ -485,7 +497,7 @@ const Home = () => {
               style={{
                 fontSize: 20,
                 fontWeight: "bold",
-                color: COLORS.gray,
+                color: COLORS.white,
                 marginLeft: 5,
               }}
             >
@@ -503,7 +515,7 @@ const Home = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </>
+    </View>
   );
 };
 

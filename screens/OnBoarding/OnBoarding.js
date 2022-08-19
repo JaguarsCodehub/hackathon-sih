@@ -215,6 +215,9 @@ const OnBoarding = () => {
                     height: index == 1 ? "98%" : "100%",
                     width: "100%",
                   }}
+                  accessible={true}
+                  accessibilityLabel="This is a Onboarding Screen with 3 slides"
+                  accessibilityHint="Swipe 3 times on your right side and click on the Done button at the bottom after you finished"
                 >
                   <Image
                     source={item.bannerImage}

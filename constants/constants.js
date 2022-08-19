@@ -3,25 +3,25 @@ const onboarding_screens = [
     id: 1,
     backgroundImage: require("../assets/images/background_01.1.png"),
     bannerImage: require("../assets/images/image-3.png"),
-    title: "Choose a Favourite Food",
+    title: "Choose your desired class",
     description:
-      "When you oder Eat Steet, we’ll hook you up with exclusive coupon, specials and rewards",
+      "When you enter the college, we will hook you up with your desired classroom",
   },
   {
     id: 2,
     backgroundImage: require("../assets/images/background_02.png"),
     bannerImage: require("../assets/images/image-2.png"),
-    title: "Hot Delivery to Home",
+    title: "Directions at your fingertips",
     description:
-      "We make food ordering fasr, simple and free-no matter if you order online or cash",
+      "Shortest path defined to your room in just 5 steps at your fingertips",
   },
   {
     id: 3,
     backgroundImage: require("../assets/images/background_01.1.png"),
     bannerImage: require("../assets/images/image-1.png"),
-    title: "Receive the Great Food",
+    title: "Travel made easy for you",
     description:
-      "You’ll receive the great food within a hour. And get free delivery credits for every order.",
+      "Overall information of your college rooms, Bustops, Railway stations and Schools.",
   },
 ];
 

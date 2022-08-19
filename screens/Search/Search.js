@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import React from "react";
-import { COLORS, FONTS, icons, SIZES } from "../../constants";
+import { COLORS, FONTS, icons, images, SIZES } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -93,550 +93,186 @@ const Search = () => {
             }}
           />
         </View>
-
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              Library
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              33 steps ahead from 3rd Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* Canteen */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              Canteen
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              110 steps ahead Ground Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* IT Lab */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              IT Lab
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              16 steps ahead Third Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* Admin Lab */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              Admin Office
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              16 steps ahead Third Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* AV Room Lab */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              AV Room
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              16 steps ahead Third Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* Sports Dept */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              Sports Department
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              16 steps ahead Third Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* Boys Common Room */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              Boys Common Room
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              16 steps ahead Third Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {/* 201 ClassRoom */}
-        <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            // marginTop: 40,
-            borderRadius: 20,
-            backgroundColor: COLORS.white,
-            padding: 20,
-            height: 80,
-            width: SIZES.width * 0.85,
-            marginTop: 20,
-            marginLeft: 30,
-            marginBottom: 80,
-            marginRight: SIZES.padding,
-            paddingRight: SIZES.radius,
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.55,
-            shadowRadius: 3.84,
-
-            elevation: 30,
-          }}
-        >
-          <View style={{}}>
-            <Feather
-              name="trending-up"
-              size={25}
-              color={COLORS.gray2}
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: 40,
-                paddingLeft: 12,
-
-                padding: 10,
-                backgroundColor: COLORS.lightGray2,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 1,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h2,
-                fontSize: 18,
-                fontWeight: "bold",
-                color: COLORS.gray,
-              }}
-            >
-              201 ClassRoom
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h3,
-              }}
-            >
-              16 steps ahead Third Floor
-            </Text>
-          </View>
-        </TouchableOpacity>
       </ScrollView>
+    );
+  }
+
+  function renderCard() {
+    return (
+      <>
+        <TouchableOpacity
+          style={{
+            height: 100,
+            backgroundColor: COLORS.lightGray1,
+            // padding: 20,
+            margin: 20,
+            borderRadius: 20,
+            flexDirection: "row",
+          }}
+        >
+          <Image
+            source={icons.bus}
+            style={{
+              height: 100,
+              width: 100,
+              marginLeft: 10,
+            }}
+          />
+
+          <View
+            style={{
+              flex: 1,
+              marginLeft: 20,
+              paddingTop: 16,
+            }}
+          >
+            <Text
+              style={{
+                ...FONTS.h3,
+                fontSize: 17,
+                fontWeight: "bold",
+                color: COLORS.black,
+              }}
+            >
+              Nearby Bus Stops
+            </Text>
+
+            <Text
+              style={{
+                color: COLORS.darkGray2,
+              }}
+            >
+              Andheri East, Tolani, Takshila
+            </Text>
+            <Text
+              style={{
+                marginTop: SIZES.base,
+                fontSize: 20,
+                fontWeight: "bold",
+                marginTop: 10,
+              }}
+            >
+              392 , 339, 308
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            height: 100,
+            backgroundColor: COLORS.lightGray1,
+            // padding: 20,
+            margin: 20,
+            borderRadius: 20,
+            flexDirection: "row",
+            marginTop: -10,
+          }}
+        >
+          <Image
+            source={icons.train}
+            style={{
+              height: 100,
+              width: 100,
+              marginLeft: 10,
+            }}
+          />
+
+          <View
+            style={{
+              flex: 1,
+              marginLeft: 20,
+              paddingTop: 16,
+            }}
+          >
+            <Text
+              style={{
+                ...FONTS.h3,
+                fontSize: 17,
+                fontWeight: "bold",
+                color: COLORS.black,
+              }}
+            >
+              Railway Stations
+            </Text>
+
+            <Text
+              style={{
+                color: COLORS.darkGray2,
+              }}
+            >
+              Andheri, Jogeshwari
+            </Text>
+            <Text
+              style={{
+                marginTop: SIZES.base,
+                fontSize: 20,
+                fontWeight: "bold",
+                marginTop: 10,
+              }}
+            >
+              Local Metro
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            height: 100,
+            backgroundColor: COLORS.lightGray1,
+            // padding: 20,
+            margin: 20,
+            marginTop: -10,
+            borderRadius: 20,
+            flexDirection: "row",
+          }}
+        >
+          <Image
+            source={icons.school}
+            style={{
+              height: 100,
+              width: 100,
+              marginLeft: 10,
+            }}
+          />
+
+          <View
+            style={{
+              flex: 1,
+              marginLeft: 20,
+              paddingTop: 16,
+            }}
+          >
+            <Text
+              style={{
+                ...FONTS.h3,
+                fontSize: 17,
+                fontWeight: "bold",
+                color: COLORS.black,
+              }}
+            >
+              Schools Near by
+            </Text>
+
+            <Text
+              style={{
+                color: COLORS.darkGray2,
+              }}
+            >
+              Andheri East, Tolani, Takshila
+            </Text>
+            <Text
+              style={{
+                marginTop: SIZES.base,
+                fontSize: 20,
+                fontWeight: "bold",
+                marginTop: 10,
+              }}
+            >
+              Dominic, Holy Family
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </>
     );
   }
 
@@ -651,6 +287,9 @@ const Search = () => {
 
       {/* Search Fields */}
       {renderTrendingSearch()}
+
+      {/* Location Cards */}
+      {renderCard()}
     </View>
   );
 };

@@ -7,8 +7,9 @@ const LineDivider = ({ lineStyle }) => {
     <View
       style={{
         height: 2,
+        marginTop: 10,
         width: "100%",
-        backgroundColor: COLORS.lightGray1,
+        backgroundColor: COLORS.gray3,
         ...lineStyle,
       }}
     ></View>

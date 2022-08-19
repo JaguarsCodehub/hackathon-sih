@@ -48,7 +48,8 @@ const HorizontalFoodCard = ({ containerStyle, item, imageStyle, onPress }) => {
         <Text
           style={{
             marginTop: SIZES.base,
-            ...FONTS.h2,
+            fontSize: 20,
+            fontWeight: "bold",
           }}
         >
           {item.price} steps ahead

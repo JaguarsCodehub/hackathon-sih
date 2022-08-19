@@ -3,7 +3,15 @@ import React, { useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-import { OnBoarding, Home, Directions, Map } from "./screens";
+import {
+  OnBoarding,
+  Home,
+  Directions,
+  Map,
+  Login,
+  Post,
+  AddPostScreen,
+} from "./screens";
 
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
@@ -28,6 +36,12 @@ export default function App() {
           initialRouteName={"OnBoarding"}
         >
           <Stack.Screen
+            name="Home"
+            component={Home}
+            // key={OnBoarding}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
             name="OnBoarding"
             component={OnBoarding}
             key={OnBoarding}
@@ -41,6 +55,21 @@ export default function App() {
           <Stack.Screen
             name="Map"
             component={Map}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Post"
+            component={Post}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AddPostScreen"
+            component={AddPostScreen}
             options={{ headerShown: false }}
           />
           <Stack.Screen

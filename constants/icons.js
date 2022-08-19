@@ -28,6 +28,9 @@ const help = require("../assets/icons/help.png");
 const check_circle = require("../assets/icons/check_circle.png");
 const dotted_line = require("../assets/icons/dotted_line.png");
 const map = require("../assets/icons/map.png");
+const bus = require("../assets/icons/bus.png");
+const train = require("../assets/icons/train.png");
+const school = require("../assets/icons/school.png");
 
 export default {
   coupon,
@@ -60,4 +63,7 @@ export default {
   check_circle,
   dotted_line,
   map,
+  bus,
+  train,
+  school,
 };

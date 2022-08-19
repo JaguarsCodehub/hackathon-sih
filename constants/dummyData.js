@@ -112,7 +112,7 @@ const gymnasium = {
 const sportsDept = {
   id: 6,
   name: "Sports Department",
-  description: "Grilled vegetables sandwich",
+  description: "Boxing, Archery and Judo",
   categories: [1],
   price: 56,
   calories: 78,
@@ -376,7 +376,7 @@ const boysCommonRoom = {
 const womenDevCell = {
   id: 14,
   name: "Women Dev Cell",
-  description: "Reserved for Events",
+  description: "Women Empowerment",
   categories: [3],
   price: 56,
   calories: 78,
@@ -409,7 +409,7 @@ const womenDevCell = {
 const classroom201 = {
   id: 15,
   name: "201 Classroom",
-  description: "Reserved for Events",
+  description: "Frequently used classroom",
   categories: [3],
   price: 18,
   calories: 78,
@@ -442,7 +442,7 @@ const classroom201 = {
 const itLab = {
   id: 16,
   name: "IT Lab",
-  description: "Reserved for Events",
+  description: "Practical Lectures",
   categories: [4, 5],
   price: 16,
   calories: 78,
@@ -480,7 +480,7 @@ const itLab = {
 const girlsCommonRoom = {
   id: 17,
   name: "Girls Common Room",
-  description: "Reserved for Events",
+  description: "Only Girls Space",
   categories: [4],
   price: 60,
   calories: 78,
@@ -513,7 +513,7 @@ const girlsCommonRoom = {
 const library = {
   id: 18,
   name: "Library",
-  description: "Reserved for Events",
+  description: "Study in peace here",
   categories: [5],
   price: 33,
   calories: 78,

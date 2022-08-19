@@ -4,6 +4,7 @@ import { FONTS, COLORS, SIZES } from "../constants/theme";
 import { dummyData } from "../constants";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Entypo from "react-native-vector-icons/Entypo";
+import { useNavigation } from "@react-navigation/native";
 
 const Header = ({
   containerStyle,
@@ -15,6 +16,8 @@ const Header = ({
   iconStyle,
   arrowStyle,
 }) => {
+  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -77,7 +80,7 @@ const Header = ({
       </View>
 
       {/* Image */}
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Post")}>
         <Image
           source={dummyData?.myProfile?.profile_image}
           style={{

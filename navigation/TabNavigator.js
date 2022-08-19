@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Favourite, Home, Notification, Search, Map } from "../screens";
+import { Favourite, Home, Notification, Search, Map, Login } from "../screens";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Feather from "react-native-vector-icons/Feather";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
@@ -52,8 +52,8 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Reviews"
-        component={Favourite}
+        name="Login"
+        component={Login}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
@@ -65,11 +65,11 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Notice"
+        name="Chat"
         component={Notification}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bus-side" color={color} size={30} />
+            <MaterialCommunityIcons name="chat" color={color} size={30} />
           ),
         }}
       />

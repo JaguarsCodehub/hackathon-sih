@@ -117,8 +117,8 @@ const Home = () => {
               }}
               imageStyle={{
                 // marginTop: 35,
-                height: 120,
-                width: 120,
+                height: 110,
+                width: 110,
               }}
               item={item}
               onPress={() => navigation.navigate("Map")}

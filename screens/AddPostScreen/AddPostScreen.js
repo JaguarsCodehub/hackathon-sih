@@ -62,21 +62,21 @@ const AddPostScreen = () => {
           numberOfLines={4}
         />
       </View>
-      <TabNavigator />
+      {/* <TabNavigator /> */}
       <ActionButton buttonColor="rgba(231,76,60,1)">
         <ActionButton.Item
           buttonColor="#9b59b6"
-          title="New Task"
+          title="Take Photo"
           onPress={() => console.log("notes tapped!")}
         >
-          <Icon name="md-create" style={styles.actionButtonIcon} />
+          <Icon name="camera" style={styles.actionButtonIcon} />
         </ActionButton.Item>
         <ActionButton.Item
           buttonColor="#3498db"
-          title="Notifications"
+          title="Choose from Gallery"
           onPress={() => {}}
         >
-          <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
+          <Icon name="phone-landscape" style={styles.actionButtonIcon} />
         </ActionButton.Item>
         <ActionButton.Item
           buttonColor="#1abc9c"

@@ -109,6 +109,7 @@ const Search = () => {
             borderRadius: 20,
             flexDirection: "row",
           }}
+          onPress={() => navigation.navigate("Bus")}
         >
           <Image
             source={icons.bus}
@@ -167,6 +168,7 @@ const Search = () => {
             flexDirection: "row",
             marginTop: -10,
           }}
+          onPress={() => navigation.navigate("PublicPlace")}
         >
           <Image
             source={icons.train}
@@ -225,6 +227,7 @@ const Search = () => {
             borderRadius: 20,
             flexDirection: "row",
           }}
+          onPress={() => navigation.navigate("Schools")}
         >
           <Image
             source={icons.school}

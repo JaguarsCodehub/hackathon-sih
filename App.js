@@ -11,6 +11,9 @@ import {
   Login,
   Post,
   AddPostScreen,
+  Bus,
+  Schools,
+  PublicPlace,
 } from "./screens";
 
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
@@ -65,6 +68,21 @@ export default function App() {
           <Stack.Screen
             name="Post"
             component={Post}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Bus"
+            component={Bus}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Schools"
+            component={Schools}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="PublicPlace"
+            component={PublicPlace}
             options={{ headerShown: false }}
           />
           <Stack.Screen

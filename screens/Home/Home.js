@@ -22,6 +22,7 @@ import {
   SIZES,
 } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Section = ({ title, onPress, children }) => {
   return (
@@ -398,6 +399,7 @@ const Home = () => {
               marginTop: 12,
               alignItems: "center",
             }}
+            onPress={() => navigation.navigate("Map")}
           >
             <Text
               style={{
@@ -492,6 +494,7 @@ const Home = () => {
               marginTop: 12,
               alignItems: "center",
             }}
+            onPress={() => navigation.navigate("Map")}
           >
             <Text
               style={{
@@ -513,7 +516,36 @@ const Home = () => {
               }}
             />
           </TouchableOpacity>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+              margin: 10,
+              marginTop: 60,
+              alignItems: "center",
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 40,
+                fontWeight: "bold",
+                color: COLORS.black,
+                width: 220,
+                letterSpacing: -1,
+              }}
+            >
+              Made with love by jyotindra ❣️
+            </Text>
+            <Ionicons
+              name="ios-barcode"
+              size={100}
+              color={COLORS.gray}
+              style={{}}
+            />
+          </View>
         </View>
+
+        {/* Made by */}
       </ScrollView>
     </View>
   );

@@ -7,6 +7,9 @@ import Search from "./Search/Search";
 import Directions from "./Directions/Directions";
 import Post from "./Post/Post";
 import AddPostScreen from "./AddPostScreen/AddPostScreen";
+import Bus from "./Bus/Bus";
+import Schools from "./Schools/Schools";
+import PublicPlace from "./PublicPlace/PublicPlace";
 
 export {
   OnBoarding,
@@ -18,4 +21,7 @@ export {
   Directions,
   Post,
   AddPostScreen,
+  Bus,
+  Schools,
+  PublicPlace,
 };
